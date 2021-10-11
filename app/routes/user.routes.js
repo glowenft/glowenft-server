@@ -9,5 +9,8 @@ module.exports = app => {
     // Login
     router.post("/login", users.login);
 
+    // Retrieve all nfts
+    router.get("/", users.findAll);
+
     app.use('/api/users', router);
 };

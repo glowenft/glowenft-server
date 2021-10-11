@@ -9,6 +9,7 @@ module.exports = mongoose => {
                 email: { type: String, unique: true, required: true },
                 password: { type: String, required: true },
                 token: { type: String },
+                role: { type: String, default: 'artist' }
             },
             { timestamps: true }
         )

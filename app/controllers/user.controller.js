@@ -91,6 +91,16 @@ exports.login = async (req, res) => {
 
 };
 
+// Retrieve all Tutorials from the database.
+exports.findAll = (req, res) => {
+    var query = require('mongo-queryfilter').filter(req.query);
+    return User
+        .find(query)
+        .then(data => {
+            res.send(data)
+        })
+};
+
 // Find a single Tutorial with an id
 exports.findOne = (req, res) => {
 
