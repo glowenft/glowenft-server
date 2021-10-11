@@ -4,7 +4,7 @@ module.exports = mongoose => {
         mongoose.Schema(
             {
                 title: String,
-                name: { type: String, required: true },
+                name: String,
                 description: String,
                 tags: [String],
                 url: String,

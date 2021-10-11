@@ -13,14 +13,10 @@ exports.create = (req, res) => {
         batch,
         ownerId,
         creatorId } = req.body;
-    // Validate request
-    if (!req.body.name) {
-        res.status(400).send({ message: "Content can not be empty!" });
-        return;
-    }
 
     // Create a Tutorial
     const nft = new Nft({
+        title,
         name,
         description,
         tags,
