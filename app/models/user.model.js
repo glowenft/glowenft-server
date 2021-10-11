@@ -9,7 +9,9 @@ module.exports = mongoose => {
                 email: { type: String, unique: true, required: true },
                 password: { type: String, required: true },
                 token: { type: String },
-                role: { type: String, default: 'artist' }
+                role: { type: String, default: 'artist' },
+                profileImage: String,
+                coverImage: String
             },
             { timestamps: true }
         )

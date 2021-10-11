@@ -8,7 +8,7 @@ exports.register = async (req, res) => {
     // Our register logic starts here
     try {
         // Get user input
-        const { first_name, last_name, email, password, username } = req.body;
+        const { first_name, last_name, email, password, username, coverImage, profileImage } = req.body;
 
         // Validate user input
         if (!(email && password && username)) {
@@ -34,6 +34,7 @@ exports.register = async (req, res) => {
             last_name,
             email: email.toLowerCase(), // sanitize: convert email to lowercase
             password: encryptedPassword,
+            coverImage, profileImage
         });
 
         // Create token
