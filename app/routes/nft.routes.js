@@ -9,7 +9,7 @@ module.exports = app => {
     router.post("/", auth, nfts.create);
 
     // Retrieve all nfts
-    router.get("/", auth, nfts.findAll);
+    router.get("/", nfts.findAll);
 
     // Retrieve all published nfts
     router.get("/published", auth, nfts.findAllPublished);
