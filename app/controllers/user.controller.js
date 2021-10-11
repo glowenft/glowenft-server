@@ -11,7 +11,7 @@ exports.register = async (req, res) => {
         const { first_name, last_name, email, password, username } = req.body;
 
         // Validate user input
-        if (!(email && password && first_name && last_name)) {
+        if (!(email && password && username)) {
             res.status(400).send("All input is required");
         }
 
