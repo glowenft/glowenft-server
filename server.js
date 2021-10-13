@@ -3,12 +3,15 @@ const cors = require("cors");
 var winston = require('winston');
 var expressWinston = require('express-winston');
 require('dotenv').config()
+const fileUpload = require('express-fileupload');
 
 const app = express();
 
 var corsOptions = {
     origin: "http://localhost:8081"
 };
+
+app.use(fileUpload());
 
 app.use(cors(corsOptions));
 
