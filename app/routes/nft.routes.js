@@ -11,7 +11,6 @@ module.exports = app => {
 
     //Getting the uploaded file via hash code.
     router.get('/getfile', auth, function (req, res) {
-        console.log('HHHHH')
         //This hash is returned hash of addFile router.
         const validCID = req.query.cid;
 
